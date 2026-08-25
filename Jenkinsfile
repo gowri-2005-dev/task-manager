@@ -11,5 +11,10 @@ pipeline {
              sh 'npm test || true'
           }
        }
+       stage ('Docker Build') {
+          steps {
+             sh 'docker build -t task-manager
+          }
+       }
     }
 }
