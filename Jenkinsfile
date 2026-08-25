@@ -13,7 +13,7 @@ pipeline {
        }
        stage ('Docker Build') {
           steps {
-             sh 'docker build -t task-manager
+             sh 'docker build -t task-manager .'
           }
        }
     }
