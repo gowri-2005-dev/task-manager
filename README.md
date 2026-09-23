@@ -2,7 +2,7 @@
 
 A simple Task Manager REST API built using Node.js and Express.js.
 
-The project demonstrates CRUD operations and deployment using Docker and Kubernetes.
+The project demonstrates CRUD operations, Docker containerization, Kubernetes deployment, Jenkins CI/CD automation, and deployment on AWS EC2.
 
 ## Technologies Used
 
@@ -13,6 +13,7 @@ The project demonstrates CRUD operations and deployment using Docker and Kuberne
 - Minikube
 - Jenkins
 - GitHub
+- AWS EC2
 - Postman
 
 ## Project Features
@@ -24,6 +25,8 @@ The project demonstrates CRUD operations and deployment using Docker and Kuberne
 - Dockerize the application
 - Deploy the application using Kubernetes
 - Run two replicas of the application
+- Automate build and deployment using Jenkins
+- Deploy the application on AWS EC2
 
 ## API Endpoints
  
@@ -146,17 +149,31 @@ The pipeline configuration is stored in:
 Jenkinsfile
 ```
 
-The basic workflow is:
+## AWS EC2 Deployment
+
+The Task Manager application is deployed on an AWS EC2 instance.
+
+The application is accessible through:
+http://3.7.73.8:3000/tasks
+
+The API was successfully tested and returned:
+[]
+
+The Jenkins pipeline workflow is:
 
 GitHub
    ↓
 Jenkins
    ↓
-Build
+Install Dependencies
    ↓
-Docker
+Application Check
    ↓
-Deployment
+Docker Build
+   ↓
+Docker Run
+   ↓
+AWS EC2 Deployment
 
 
 ## Kubernetes
@@ -254,6 +271,17 @@ Node.js + Express
         ↓
      Postman
 ```
+For AWS deployment:
+
+GitHub
+   ↓
+Jenkins
+   ↓
+Docker
+   ↓
+AWS EC2
+   ↓
+Task Manager API
 
 ## Data Storage
 
@@ -270,14 +298,13 @@ A database such as MongoDB can be added in the future for permanent storage.
 * Add input validation
 * Add automated testing
 * Push Docker image to Docker Hub
-* Deploy to AWS
 * Add Kubernetes monitoring
 
 ## Conclusion
 
 The Task Manager API project demonstrates the complete development and deployment workflow of a Node.js application.
 
-The project starts with building CRUD APIs using Node.js and Express.js and then uses Git and GitHub for version control. Jenkins is used for CI/CD automation, Docker is used for containerization, and Kubernetes with Minikube is used for application deployment and management.
+The project starts with building CRUD APIs using Node.js and Express.js and then uses Git and GitHub for version control. Jenkins is used for CI/CD automation, Docker is used for containerization, Kubernetes with Minikube is used for application deployment and management, and AWS EC2 is used to host the deployed application.
 
 This project provides practical experience in developing, testing, containerizing, automating, and deploying a real-world application.
 
