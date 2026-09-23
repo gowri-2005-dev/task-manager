@@ -306,6 +306,8 @@ The Task Manager API project demonstrates the complete development and deploymen
 
 The project starts with building CRUD APIs using Node.js and Express.js and then uses Git and GitHub for version control. Jenkins is used for CI/CD automation, Docker is used for containerization, Kubernetes with Minikube is used for application deployment and management, and AWS EC2 is used to host the deployed application.
 
+CI/CD deployment verified successfully.
+
 This project provides practical experience in developing, testing, containerizing, automating, and deploying a real-world application.
 
 ## Author
